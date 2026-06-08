@@ -1,0 +1,8 @@
+{
+  "backend_mode": "rest",
+  "base_url": "http://127.0.0.1:8000",
+  "db_path": "C:/VKR/app.db",
+  "projects_path": "C:/VKR/projects",
+  "models_path": "C:/VKR/models",
+  "reports_path": "C:/VKR/reports"
+}

@@ -1,0 +1,17 @@
+parameters,mae,mse,rmse,mape
+"{'window_size': 10, 'hidden_layer_1': 64, 'hidden_layer_2': 0, 'max_iter': 500, 'random_state': 42}",19554434530.86188,4.275701731220538e+20,20677770022.95107,101.07594109447184
+"{'window_size': 10, 'hidden_layer_1': 32, 'hidden_layer_2': 0, 'max_iter': 500, 'random_state': 42}",22082645282.15583,5.326420530335536e+20,23079039257.16046,113.17036800462455
+"{'window_size': 10, 'hidden_layer_1': 64, 'hidden_layer_2': 32, 'max_iter': 500, 'random_state': 42}",22577502445.486435,5.495898236548173e+20,23443332178.997448,114.22553122075516
+"{'window_size': 5, 'hidden_layer_1': 32, 'hidden_layer_2': 0, 'max_iter': 500, 'random_state': 42}",24854817599.91072,6.478097990916896e+20,25452107949.86713,123.96093901756093
+"{'window_size': 3, 'hidden_layer_1': 32, 'hidden_layer_2': 32, 'max_iter': 500, 'random_state': 42}",25935178888.12795,6.978473692473394e+20,26416800889.724316,127.54266057148445
+"{'window_size': 5, 'hidden_layer_1': 32, 'hidden_layer_2': 32, 'max_iter': 500, 'random_state': 42}",25669306998.051075,7.000015755186856e+20,26457542885.13364,128.80160344881202
+"{'window_size': 7, 'hidden_layer_1': 64, 'hidden_layer_2': 0, 'max_iter': 500, 'random_state': 42}",25808483026.499256,7.193357978995731e+20,26820436198.905735,130.74308225074512
+"{'window_size': 7, 'hidden_layer_1': 64, 'hidden_layer_2': 32, 'max_iter': 500, 'random_state': 42}",26417972373.710716,7.941135396692036e+20,28180020221.234825,136.19021453162057
+"{'window_size': 10, 'hidden_layer_1': 32, 'hidden_layer_2': 32, 'max_iter': 500, 'random_state': 42}",27603315511.440216,7.954943437159325e+20,28204509279.82851,137.78895810263978
+"{'window_size': 7, 'hidden_layer_1': 32, 'hidden_layer_2': 32, 'max_iter': 500, 'random_state': 42}",27671296217.79781,8.232782720085315e+20,28692826141.88661,139.64395420217647
+"{'window_size': 3, 'hidden_layer_1': 64, 'hidden_layer_2': 0, 'max_iter': 500, 'random_state': 42}",28865104417.311504,8.591515851942569e+20,29311287675.47166,142.1192737873782
+"{'window_size': 7, 'hidden_layer_1': 32, 'hidden_layer_2': 0, 'max_iter': 500, 'random_state': 42}",28448380431.496117,8.721512992689585e+20,29532207829.232113,143.98193609390398
+"{'window_size': 5, 'hidden_layer_1': 64, 'hidden_layer_2': 32, 'max_iter': 500, 'random_state': 42}",29133485671.596825,8.990207462058483e+20,29983674661.48618,145.96418942569682
+"{'window_size': 5, 'hidden_layer_1': 64, 'hidden_layer_2': 0, 'max_iter': 500, 'random_state': 42}",29573449265.703327,9.328638823289632e+20,30542820471.08556,148.93661908824726
+"{'window_size': 3, 'hidden_layer_1': 64, 'hidden_layer_2': 32, 'max_iter': 500, 'random_state': 42}",32438631730.874626,1.0900794588938973e+21,33016351386.75831,160.6642643889603
+"{'window_size': 3, 'hidden_layer_1': 32, 'hidden_layer_2': 0, 'max_iter': 500, 'random_state': 42}",48532096654.251816,2.4977053568260867e+21,49977048300.45575,242.26401692287646

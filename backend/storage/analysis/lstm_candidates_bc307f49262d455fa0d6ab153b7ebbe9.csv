@@ -1,0 +1,9 @@
+parameters,mae,mse,rmse,mape
+"{'window_size': 3, 'hidden_size': 16, 'num_layers': 1, 'epochs': 60, 'learning_rate': 0.01, 'random_state': 42}",21341356495.175514,4.883083890930654e+20,22097700991.122707,107.99428052525484
+"{'window_size': 5, 'hidden_size': 16, 'num_layers': 1, 'epochs': 60, 'learning_rate': 0.01, 'random_state': 42}",22682999501.122314,5.4913027015999894e+20,23433528760.30409,114.51965672973242
+"{'window_size': 7, 'hidden_size': 16, 'num_layers': 1, 'epochs': 60, 'learning_rate': 0.01, 'random_state': 42}",24114636346.59426,6.200812456524424e+20,24901430594.494816,121.70232549579576
+"{'window_size': 14, 'hidden_size': 16, 'num_layers': 1, 'epochs': 60, 'learning_rate': 0.01, 'random_state': 42}",25074260388.35813,6.668857236560136e+20,25824130646.66483,126.1714963378796
+"{'window_size': 14, 'hidden_size': 32, 'num_layers': 1, 'epochs': 60, 'learning_rate': 0.01, 'random_state': 42}",26848463158.195778,7.579588062048048e+20,27531051672.69868,134.39262992299788
+"{'window_size': 5, 'hidden_size': 32, 'num_layers': 1, 'epochs': 60, 'learning_rate': 0.01, 'random_state': 42}",27753490805.095654,8.081736249733529e+20,28428394695.679756,138.67284545755533
+"{'window_size': 3, 'hidden_size': 32, 'num_layers': 1, 'epochs': 60, 'learning_rate': 0.01, 'random_state': 42}",27974613211.160866,8.160586558275492e+20,28566740378.06115,139.17203825345533
+"{'window_size': 7, 'hidden_size': 32, 'num_layers': 1, 'epochs': 60, 'learning_rate': 0.01, 'random_state': 42}",29577321384.579517,9.173178571727189e+20,30287255689.03064,147.7528311091276

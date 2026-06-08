@@ -1,0 +1,6 @@
+PyQt6>=6.7
+matplotlib>=3.8
+pandas>=2.2
+numpy>=1.26
+requests>=2.31
+openpyxl>=3.1
