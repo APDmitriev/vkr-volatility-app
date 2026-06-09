@@ -38,8 +38,8 @@ class RestBackend:
         response = self.session.get(self._url("/health"), timeout=15)
         if response.ok:
             return response.json()
-        # В backend из ВКР endpoint health может отсутствовать.
-        # В таком случае проверяем доступность через существующий список проектов.
+
+
         if response.status_code == 404:
             projects_response = self.session.get(self._url("/projects/"), timeout=15)
             self._raise_for_status(projects_response)
@@ -140,7 +140,7 @@ class RestBackend:
         payload = response.json()
 
         preview = pd.DataFrame(payload.get("preview", []))
-        # для нормальной визуализации берём полный локальный файл, а не только preview с backend
+
         if path.suffix.lower() in {".xlsx", ".xls"} or file_type.lower() == "xlsx":
             df = pd.read_excel(path)
         else:
@@ -1014,9 +1014,9 @@ class RestBackend:
         )
 
         future_preview_df = pd.DataFrame(raw.get("future_preview") or [])
-        # Обратная совместимость: старый backend возвращал только preview с holdout-прогнозом.
-        # Новый backend возвращает future_preview без actual — именно его и нужно показывать
-        # во вкладке «Прогнозирование».
+
+
+
         if future_preview_df.empty:
             future_preview_df = pd.DataFrame(raw.get("preview", []))
 

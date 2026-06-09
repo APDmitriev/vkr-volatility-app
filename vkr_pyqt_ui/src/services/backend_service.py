@@ -364,12 +364,12 @@ class BackendService:
         return rows
 
     def get_experiments(self) -> list[dict[str, Any]]:
-        # Важно: этот метод должен только возвращать уже загруженную историю.
-        # Если здесь вызывать reload_experiments(), то при пустой истории возникает
-        # цикл: страница -> get_experiments() -> reload_experiments() ->
-        # experiments_changed -> страница -> get_experiments() ...
-        # На Windows это проявляется как RecursionError и нативное падение PyQt
-        # с кодом 0xC0000409 при открытии страницы «Обучение моделей».
+
+
+
+
+
+
         return list(self.state.experiments)
 
     def delete_experiment(self, experiment_id: str) -> None:

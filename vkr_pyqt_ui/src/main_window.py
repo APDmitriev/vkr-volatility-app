@@ -110,8 +110,8 @@ class MainWindow(QMainWindow):
         self.refresh_project_selector()
         self.refresh_backend_badge()
 
-        # Загружаем проекты после построения окна, чтобы при запуске сразу был виден
-        # список проектов из backend. Ошибки подключения остаются в строке состояния.
+
+
         QTimer.singleShot(0, self.safe_initialize_backend)
 
     def _build_toolbar(self) -> None:

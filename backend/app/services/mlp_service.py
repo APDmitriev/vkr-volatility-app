@@ -80,8 +80,8 @@ def run_mlp_forecast(
     result_df["error"] = result_df["actual"] - result_df["predicted"]
     metrics = calculate_metrics(result_df["actual"], result_df["predicted"])
 
-    # Для пользовательского прогноза продолжаем ряд после последней
-    # фактической точки. Метрики выше остаются backtest-метриками.
+
+
     future_history = data["matrix"].copy()
     future_last_exog = future_history[-1, 1:].copy() if future_history.shape[1] > 1 else np.asarray([], dtype=float)
     future_predictions: list[float] = []

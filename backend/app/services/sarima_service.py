@@ -48,12 +48,6 @@ def run_sarima_forecast(
     seasonal_q: int = 1,
     seasonal_period: int = 7,
 ) -> tuple[pd.DataFrame, dict]:
-    """Build a SARIMA forecast for a prepared dataset.
-
-    The prepared dataset must contain timestamp and value columns. The last
-    forecast_horizon observations are used as a test segment, so the returned
-    metrics are comparable with ARIMA and linear-regression runs.
-    """
     file_path = Path(processed_file_path)
     if not file_path.exists():
         raise FileNotFoundError("Файл обработанного датасета не найден")

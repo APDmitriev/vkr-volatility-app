@@ -180,8 +180,8 @@ class ProjectsPage(BasePage):
         self.created_value.setText(str(project.get('created_at', '—')))
 
     def refresh_experiments(self) -> None:
-        # Только отрисовка уже загруженных экспериментов.
-        # Загрузка из backend выполняется отдельно в BackendService.reload_experiments().
+
+
         rows = list(self.state.experiments)
         self.experiments_table.setRowCount(len(rows))
         for r, row in enumerate(rows):

@@ -22,13 +22,6 @@ from src.widgets.common import BasePage, Card
 
 
 class ComparisonPage(BasePage):
-    """Страница сравнения сохранённых экспериментов.
-
-    История загружается из backend через endpoint /api/v1/experiments/.
-    Таблица отображает все эксперименты текущего проекта, отсортированные
-    от лучшего к худшему. Графики строятся только по 8 лучшим запускам,
-    чтобы визуализация оставалась читаемой.
-    """
 
     MAX_CHART_BARS = 8
 
@@ -126,11 +119,6 @@ class ComparisonPage(BasePage):
         return f"{number:.6f}"
 
     def _quality_key(self, row: dict[str, Any]) -> tuple[float, float, float, float]:
-        """Чем меньше ключ, тем лучше эксперимент.
-
-        Основной критерий — RMSE. Если RMSE отсутствует, используется MAE,
-        затем MAPE и MSE. Эксперименты без метрик попадают в конец списка.
-        """
         rmse = self._to_float(row.get("rmse"))
         mae = self._to_float(row.get("mae"))
         mape = self._to_float(row.get("mape"))
@@ -157,7 +145,7 @@ class ComparisonPage(BasePage):
 
     def refresh(self) -> None:
         try:
-            # В REST-режиме этот вызов обращается к backend endpoint /api/v1/experiments/.
+
             self.current_rows = self.backend.reload_experiments()
         except Exception as exc:
             QMessageBox.critical(self, "Ошибка сравнения", str(exc))
@@ -216,7 +204,6 @@ class ComparisonPage(BasePage):
 
     @staticmethod
     def _chart_label(model_name: str) -> str:
-        """Возвращает компактную подпись графика без номера эксперимента."""
         clean_name = model_name.strip() or "Модель"
         parts = textwrap.wrap(clean_name, width=14, break_long_words=False)
         if len(parts) <= 3:

@@ -251,7 +251,7 @@ class DataPage(BasePage):
             df = self._read_local_dataframe(file_path, self.file_type_combo.currentText(), self.delimiter_combo.currentText())
             self._refresh_column_combos(df)
         except Exception:
-            # Не показываем ошибку здесь: файл может быть временно недоступен, основная проверка будет при загрузке.
+
             pass
 
     def preview_dataset(self, initial: bool = False) -> None:

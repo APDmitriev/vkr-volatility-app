@@ -58,8 +58,8 @@ def list_experiments(
 def create_experiment(payload: ExperimentCreate, db: Session = Depends(get_db)):
     metrics = dict(payload.metrics or {})
 
-    # Для обратной совместимости с UI: если метрики пришли отдельными полями,
-    # переносим их в нормализованную таблицу experiment_metrics.
+
+
     for metric_name, metric_value in {
         "mae": payload.mae,
         "mse": payload.mse,

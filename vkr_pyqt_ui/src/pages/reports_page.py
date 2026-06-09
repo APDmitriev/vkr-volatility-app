@@ -24,11 +24,6 @@ from src.widgets.common import BasePage, Card
 
 
 class ReportsPage(BasePage):
-    """Страница формирования отчётов.
-
-    Предпросмотр строится только из выбранных чекбоксами разделов.
-    Экспорт поддерживает PDF, DOCX и XLSX без обращения к backend.
-    """
 
     def __init__(self, state: AppState, backend: BackendService) -> None:
         super().__init__("Отчёты")
@@ -109,7 +104,6 @@ class ReportsPage(BasePage):
         return "\n".join(lines).rstrip()
 
     def build_report_rows(self) -> list[tuple[str, str, str]]:
-        """Табличное представление для XLSX."""
         rows: list[tuple[str, str, str]] = []
         for section in self.build_plain_report().split("\n\n"):
             section = section.strip()

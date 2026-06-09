@@ -83,7 +83,7 @@ def build_supervised_matrix(
     if len(feature_df) < window_size + forecast_horizon + 5:
         raise ValueError("После обработки признаков осталось недостаточно наблюдений")
 
-    # Синхронизируем timestamps/value после удаления NaN из признаков.
+
     idx = feature_df.index
     aligned_df = work_df.loc[idx].reset_index(drop=True)
     feature_df = feature_df.reset_index(drop=True)

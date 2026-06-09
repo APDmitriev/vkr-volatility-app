@@ -169,7 +169,7 @@ class TrainingPage(BasePage):
 
     def _add_row(self, form: QFormLayout, label_text: str, widget: object, group: str) -> None:
         label = QLabel(label_text)
-        form.addRow(label, widget)  # type: ignore[arg-type]
+        form.addRow(label, widget)
         self.parameter_rows.setdefault(group, []).append((label, widget))
 
     def update_parameter_visibility(self) -> None:
@@ -179,7 +179,7 @@ class TrainingPage(BasePage):
             visible = group in visible_groups
             for label, widget in rows:
                 label.setVisible(visible)
-                widget.setVisible(visible)  # type: ignore[attr-defined]
+                widget.setVisible(visible)
 
     @staticmethod
     def _model_note(model: str) -> str:

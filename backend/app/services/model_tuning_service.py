@@ -57,7 +57,6 @@ def _score_from_metrics(metrics: dict[str, Any], optimize_by: str) -> float | No
 
 
 def _garch_proxy_metrics(result_df: pd.DataFrame) -> dict[str, float | None]:
-    """Compare forecast volatility with absolute realized returns on the test segment."""
     actual_proxy = pd.to_numeric(result_df["actual_returns"], errors="coerce").abs()
     predicted = pd.to_numeric(result_df["forecast_volatility"], errors="coerce")
     mask = actual_proxy.notna() & predicted.notna()

@@ -43,8 +43,8 @@ def read_dataframe(file_path: Path) -> pd.DataFrame:
     suffix = file_path.suffix.lower()
 
     if suffix == ".csv":
-        # В пользовательских CSV часто встречаются разделители ",", ";" и табуляция.
-        # sep=None включает определение разделителя через Python-engine.
+
+
         try:
             return pd.read_csv(file_path, sep=None, engine="python")
         except Exception:

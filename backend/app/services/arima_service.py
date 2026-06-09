@@ -92,9 +92,9 @@ def run_arima_forecast(
         predicted=result_df["predicted"],
     )
 
-    # Метрики считаются на holdout-сегменте, а пользовательский прогноз
-    # строится от конца всего ряда, чтобы не подменять будущее последними
-    # уже известными наблюдениями.
+
+
+
     full_model = ARIMA(df["value"], order=(p, d, q))
     full_fitted_model = full_model.fit()
     future_values = pd.Series(full_fitted_model.forecast(steps=forecast_horizon)).reset_index(drop=True)

@@ -28,7 +28,7 @@ def run_lstm_forecast(
     try:
         import torch
         import torch.nn as nn
-    except Exception as exc:  # pragma: no cover - depends on local environment
+    except Exception as exc:
         raise RuntimeError(
             "Для LSTM требуется PyTorch. Установите зависимость: pip install torch"
         ) from exc
@@ -70,7 +70,7 @@ def run_lstm_forecast(
             )
             self.fc = nn.Linear(hidden_size, 1)
 
-        def forward(self, x):  # type: ignore[no-untyped-def]
+        def forward(self, x):
             out, _ = self.lstm(x)
             return self.fc(out[:, -1, :])
 

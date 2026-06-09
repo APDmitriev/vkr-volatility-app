@@ -7,7 +7,6 @@ import pandas as pd
 
 
 def infer_future_timestamps(df: pd.DataFrame, horizon: int, timestamp_column: str = "timestamp") -> list[pd.Timestamp]:
-    """Return timestamps immediately after the last point of a prepared time series."""
     horizon = max(1, int(horizon))
     if timestamp_column not in df.columns:
         return [pd.Timestamp(i) for i in range(horizon)]

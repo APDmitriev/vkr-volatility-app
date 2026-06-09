@@ -12,11 +12,6 @@ import pandas as pd
 
 
 class ExperimentStore:
-    """Локальное постоянное хранилище истории экспериментов PyQt-клиента.
-
-    Backend ВКР выполняет расчёты, а история запусков фиксируется на стороне UI,
-    потому что в текущем API нет отдельного endpoint для журнала экспериментов.
-    """
 
     def __init__(self, file_path: Path | None = None) -> None:
         self.file_path = file_path or Path(__file__).resolve().parents[2] / "ui_experiments.json"
@@ -77,7 +72,6 @@ class ExperimentStore:
         return None
 
     def build_record(self, experiment: dict[str, Any], *, state: Any) -> dict[str, Any]:
-        """Приводит результат расчёта модели к единому формату журнала экспериментов."""
         raw = self._make_json_safe(experiment)
         raw_response = raw.get("raw_response", {}) if isinstance(raw.get("raw_response"), dict) else {}
 

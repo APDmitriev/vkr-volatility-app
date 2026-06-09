@@ -44,7 +44,7 @@ def run_garch_forecast(
     if len(train_df) < max(30, p + q + 5):
         raise ValueError("Недостаточно данных для обучения GARCH-модели")
 
-    # arch обычно лучше работает на returns в процентах
+
     train_returns = train_df["returns"] * 100.0
 
     model = arch_model(

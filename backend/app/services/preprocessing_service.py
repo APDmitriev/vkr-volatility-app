@@ -63,8 +63,8 @@ def preprocess_dataframe(
     if sort_by_date:
         work_df = work_df.sort_values(by=date_column)
 
-    # В итоговом файле сохраняем не только timestamp/value, но и дополнительные числовые признаки.
-    # Классические модели продолжат использовать value/returns, а MLP/LSTM смогут использовать feature-колонки.
+
+
     used_names = {"timestamp", "value"}
     result_df = pd.DataFrame(
         {
@@ -83,7 +83,7 @@ def preprocess_dataframe(
             continue
         feature_name = _safe_feature_name(str(column), used_names)
         if fill_method == "drop":
-            # Для дополнительных признаков не удаляем строки, а заполняем локально: иначе пользователь может случайно потерять ряд.
+
             converted = converted.ffill().bfill()
         elif fill_method == "ffill":
             converted = converted.ffill().bfill()

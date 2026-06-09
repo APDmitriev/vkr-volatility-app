@@ -74,7 +74,7 @@ def run_linear_regression_forecast(
     if len(y_train) < 3:
         raise ValueError("Недостаточно обучающих примеров для линейной регрессии")
 
-    # Добавляем свободный член и решаем задачу МНК без внешних зависимостей.
+
     x_design = np.column_stack([np.ones(len(x_train)), x_train])
     coef, *_ = np.linalg.lstsq(x_design, y_train, rcond=None)
 
@@ -94,9 +94,9 @@ def run_linear_regression_forecast(
 
     metrics = _calculate_metrics(result_df["actual"], result_df["predicted"])
 
-    # Итоговый прогноз строим отдельно: обучаем модель на всём доступном ряде
-    # и продолжаем значения после последней фактической даты. Backtest выше
-    # нужен только для расчёта метрик качества.
+
+
+
     full_x_train, full_y_train = _make_lag_matrix(values, window_size)
     if len(full_y_train) < 3:
         raise ValueError("Недостаточно обучающих примеров для итогового прогноза")
